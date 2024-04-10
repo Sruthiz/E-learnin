@@ -1,0 +1,25 @@
+<% layout("/layouts/boilerplate") %>
+    <body>
+    <h3>All Courses</h3>
+    <!-- <form method="GET" action="/courses/new.ejs">
+      <button>Create New Courses</button>
+    </form> -->
+    <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-2" >
+    <% for(let course of allCourses) { %>
+      <a href="/courses/<%= course._id %>" class="card-link">
+    <div class="card col" >
+      <img src="<%= course.image %>" class="card-img-top" alt="course_image" style="height: 20rem" >
+      <div class="card-img-overlay"></div>
+      <div class="card-body">  
+        <p class="card-text">
+          <%= course.title %><br/>
+          &#8377; <%= course.price.toLocaleString("en-IN") %> /month
+        </p>
+        
+      </div>
+    </div>
+  </a>
+    <% } %>
+  </div>
+   
+  </body>

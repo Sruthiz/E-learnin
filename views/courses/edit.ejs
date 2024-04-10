@@ -1,0 +1,85 @@
+
+
+   <% layout("/layouts/boilerplate.ejs") %>
+  <body>
+    <div class="row">
+      <div class="col-8 offset-2">
+      <br/><br/>
+    <h3>Edit your Course</h3>
+    <form class="mb-3"
+     method="POST"
+      action="/courses/<%= course._id %>?_method=PUT" 
+      novalidate
+       class="needs-validation"
+       enctype="multipart/form-data">
+
+      <div class="mb-3">
+          <label for="title" class="form-label">Title</label> 
+          <input name="course[title]" value="<%= course.title %>" type="text"  class="form-control" required/>
+          <div class="valid-feedback">Title looks good!</div>
+         
+      </div>
+      
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea name="course[description]" class="form-control" required><%= course.description %> </textarea>
+          <div class="invalid-feedback">Please enter a short description </div>
+      </div>
+      
+    
+      
+      <div class="mb-3 medium-course-card" style="width: 15rem;">
+        <div class="card-body">
+          <p class="card-text">Original course Image</p>
+      </div>
+        <div class="card">
+            <img src="<%= course.image.url %>" class="card-img-top" alt="course Image">
+          
+        </div>
+    </div>
+    
+   
+    <div class="mb-3 ">
+      <label for="image" class="form-label">Upload New Image</label>
+      <input name="course[image]" 
+      type="file" 
+        class="form-control"  />
+      
+    </div>
+    <div class="row">
+    <div class="mb-3 col-md-3">
+      <label for="price" class="form-label">Price</label>
+      <input name="course[price]" value="<%= course.price %>" type="number" class="form-control" required  />
+    </div>
+    <div class="mb-3 col-md-6">
+    <label for="category" class="form-label">Category</label>
+      <input
+        name="course[category]"
+        value="<%= course.category %>"
+        type="text" class="form-control" required
+      />
+    </div>
+  </div>
+    <div class="mb-3">
+      <label for="level" class="form-label">level</label>
+      <input
+        name="course[level]"
+        value="<%= course.level %>"
+        type="text" required
+      />
+      </div>
+      <div class="mb-3">
+        <label for="popularity" class="form-label">Popularity</label>
+        <input
+          name="course[popularity]"
+          value="<%= course.popularity %>"
+          type="text" required
+        />
+        </div>
+      
+      <button class="btn btn-dark edit-btn mt-3">Edit</button>
+    </form>
+    </div>
+    </div>
+ 
+  

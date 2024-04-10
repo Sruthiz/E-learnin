@@ -1,0 +1,44 @@
+<% layout("/layouts/boilerplate") %>
+    <h3>Create a New Course</h3>
+    <form method="POST" action="/courses" novalidate class="needs-validation">
+    <div class="mb-3">
+      <label for="title" class="form-lable">Title</label>
+      <input name="course[title]" placeholder="enter title" type="text" class="form-control" required/>
+      
+    </div>
+    
+      
+    <div class="mb-3">
+      <label for="description" class="form-lable">Description</label>
+      <textarea name="course[description]" placeholder="enter description" class="form-control" required></textarea>
+    </div >
+      
+    <div class="mb-3">
+      <label for="image" class="form-lable">Image Link</label>
+      <input name="course[image]" placeholder="enter image URL/Link" type="text" class="form-control" required />
+    </div >
+      
+    <div class="mb-3">
+      <label for="price" class="form-lable">Price</label>
+      <input name="course[price]" placeholder="enter price" type="number" class="form-control" required/>
+    </div >
+      
+    <div class="mb-3">      
+      <label for="category" class="form-lable">Category</label>
+      <input name="course[category]" placeholder="enter category" type="text" class="form-control" required/>
+    </div>
+      
+      <div class="mb-3">
+      <label for="level" class="form-lable">Level</label>
+      <input name="course[level]"  placeholder="enter level" type="text" class="form-control"/>
+    </div>
+    <div class="mb-3">
+      <label for="popularity" class="form-lable">Popularity</label>
+      <input name="course[popularity]" placeholder="enter popularity" type="text" class="form-control"/>
+    </div>
+
+      <button class="btn btn-dark">Add</button>
+   
+    </form>
+  </body>
+</html>
