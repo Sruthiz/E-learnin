@@ -1,0 +1,1 @@
+This project is to develop a robust backend API for an e-learning platform. The API will facilitate user registration, user profile management, course management (including CRUD operations for superadmin), and user enrollment functionalities.
